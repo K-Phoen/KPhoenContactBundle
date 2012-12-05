@@ -1,0 +1,16 @@
+<span class="contact_image">
+    <img src="{{ asset('bundles/kphoencontact/images/mail.png') }}" alt="" />
+</span>
+
+<form class="contact" action="{{ path('contact_send') }}" method="post" {{ form_enctype(form) }}>
+    {{ form_errors(form) }}
+
+    {{ form_row(form.sender_name) }}
+    {{ form_row(form.sender_mail) }}
+    {{ form_row(form.subject) }}
+    {{ form_row(form.content) }}
+
+    {{ form_rest(form) }}
+
+    <input type="submit" value="Envoyer" />
+</form>
