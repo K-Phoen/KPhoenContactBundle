@@ -1,0 +1,21 @@
+{
+    "name": "kphoen/contact-bundle",
+    "description": "Yet another contact bundle",
+    "keywords": ["contact"],
+    "type": "symfony-bundle",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Kévin Gomez",
+            "email": "contact@kevingomez.fr",
+            "homepage": "http://www.kevingomez.fr/"
+        }
+    ],
+    "require": {
+        "symfony/framework-bundle": "2.*"
+    },
+    "autoload": {
+        "psr-0": { "KPhoen\\ContactBundle": "" }
+    },
+    "target-dir": "KPhoen/ContactBundle"
+}
