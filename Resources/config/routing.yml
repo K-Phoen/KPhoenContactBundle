@@ -1,0 +1,9 @@
+contact:
+    pattern:   /contact
+    defaults:  { _controller: KPhoenContactBundle:Contact:contact }
+
+contact_send:
+    pattern:   /contact/send
+    defaults:  { _controller: KPhoenContactBundle:Contact:contactSend }
+    requirements:
+        _method:  POST

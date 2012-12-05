@@ -5,7 +5,6 @@ namespace KPhoen\ContactBundle\Controller;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 
-use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 
 use KPhoen\ContactBundle\Form\Type\MessageType;
@@ -15,7 +14,6 @@ use KPhoen\ContactBundle\Model\Message;
 class ContactController extends Controller
 {
     /**
-     * @Route("/contact", name="contact")
      * @Template()
      */
     public function contactAction()
@@ -28,7 +26,6 @@ class ContactController extends Controller
     }
 
     /**
-     * @Route("/contact/send", name="contact_send", requirements={"_method"="POST"})
      * @Template(template="KPhoenContactBundle:Contact:contact.html.twig")
      */
     public function contactSendAction(Request $request)
