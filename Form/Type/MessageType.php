@@ -10,16 +10,16 @@ class MessageType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder->add('sender_name', null, array(
-            'label' => 'Nom'
+            'label' => 'contact.form.sender_name'
         ));
         $builder->add('sender_mail', 'email', array(
-            'label' => 'Adresse mail'
+            'label' => 'contact.form.sender_mail'
         ));
         $builder->add('subject', null, array(
-            'label' => 'Sujet'
+            'label' => 'contact.form.subject'
         ));
         $builder->add('content', 'textarea', array(
-            'label' => 'Message'
+            'label' => 'contact.form.content'
         ));
     }
 

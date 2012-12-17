@@ -1,7 +1,7 @@
 {% extends '::base.html.twig' %}
 
 {% block body %}
-<h2>Contact</h2>
+<h2>{% trans from "KPhoenContactBundle" %}contact.title{% endtrans %}</h2>
 
 {% include "KPhoenContactBundle:Contact:form.html.twig" with {'form': form} %}
 

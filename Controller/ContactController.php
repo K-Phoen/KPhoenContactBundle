@@ -36,7 +36,7 @@ class ContactController extends Controller
         if ($form->isValid()) {
             $message->send($this->get('mailer'), $this->container->getParameter('kphoen_contact.to'));
 
-            $this->get('session')->setFlash('notice', 'Mail envoyé !');
+            $this->get('session')->setFlash('notice', $this->translate('contact.submit.success'));
 
             return $this->redirect($this->generateUrl($this->container->getParameter('kphoen_contact.redirect_url')));
         }
@@ -49,8 +49,15 @@ class ContactController extends Controller
     protected function getForm()
     {
         $message = new Message();
-        $form = $this->createForm(new MessageType(), $message);
+        $form = $this->createForm(new MessageType(), $message, array(
+            'translation_domain' => 'KPhoenContactBundle'
+        ));
 
         return array($message, $form);
+    }
+
+    protected function translate($key, $args = array())
+    {
+        return $this->container->get('translator')->trans($key, $args, 'KPhoenContactBundle');
     }
 }
