@@ -1,0 +1,12 @@
+contact:
+    title:       Contact
+
+    submit:
+        button:  Send
+        success: Message sent!
+
+    form:
+        sender_name: Name
+        sender_mail: Email
+        subject: Subject
+        content: Message
