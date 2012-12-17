@@ -1,5 +1,7 @@
 # KPhoenContactBundle
 
+[![Build Status](https://travis-ci.org/K-Phoen/KPhoenContactBundle.png?branch=master)](https://travis-ci.org/K-Phoen/KPhoenContactBundle)
+
 Yet another contact bundle.
 
 ## Instalation
