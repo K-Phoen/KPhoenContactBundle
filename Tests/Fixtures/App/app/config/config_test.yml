@@ -1,0 +1,10 @@
+imports:
+    - { resource: config.yml }
+
+framework:
+    test: ~
+    session:
+        storage_id: session.storage.filesystem
+
+swiftmailer:
+    disable_delivery: true
