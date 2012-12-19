@@ -8,7 +8,7 @@ Yet another contact bundle.
 
 ### Composer
 
-Add `kphoen/contact-bundle` to your requires field. Then install/update your
+Add `kphoen/contact-bundle` to your required field. Then install/update your
 dependencies.
 
 ### app/AppKernel.php
