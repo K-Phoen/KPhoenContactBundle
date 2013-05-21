@@ -17,7 +17,8 @@
     },
     "require-dev": {
         "symfony/swiftmailer-bundle": "dev-master",
-        "symfony/framework-bundle": "2.*"
+        "symfony/framework-bundle": "2.*",
+        "phpunit/phpunit": "3.7.*"
     },
     "autoload": {
         "psr-0": { "KPhoen\\ContactBundle": "" }
