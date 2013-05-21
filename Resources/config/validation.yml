@@ -2,20 +2,20 @@ KPhoen\ContactBundle\Model\Message:
     properties:
         sender_name:
             - NotBlank: ~
-            - MinLength:
-                limit: 3
-                message: message.sender_name.minlength
+            - Length:
+                min: 3
+                minMessage: message.sender_name.minlength
         sender_mail:
             - NotBlank: ~
             - Email:
                 message: message.sender_mail.email
         subject:
             - NotBlank: ~
-            - MinLength:
-                limit: 3
-                message: message.subject.minlength
+            - Length:
+                min: 3
+                minMessage: message.subject.minlength
         content:
             - NotBlank: ~
-            - MinLength:
-                limit: 10
-                message: message.content.minlength
+            - Length:
+                min: 10
+                minMessage: message.content.minlength

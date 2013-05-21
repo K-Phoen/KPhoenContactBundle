@@ -31,12 +31,12 @@ class ContactController extends Controller
     public function contactSendAction(Request $request)
     {
         list($message, $form) = $this->getForm();
-        $form->bindRequest($request);
+        $form->bind($request);
 
         if ($form->isValid()) {
             $message->send($this->get('mailer'), $this->container->getParameter('kphoen_contact.to'));
 
-            $this->get('session')->setFlash('notice', $this->translate('contact.submit.success'));
+            $this->get('session')->getFlashBag()->add('notice', $this->translate('contact.submit.success'));
 
             return $this->redirect($this->generateUrl($this->container->getParameter('kphoen_contact.redirect_url')));
         }

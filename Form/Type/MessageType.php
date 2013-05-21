@@ -3,6 +3,7 @@ namespace KPhoen\ContactBundle\Form\Type;
 
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
+use Symfony\Component\OptionsResolver\OptionsResolverInterface;
 
 
 class MessageType extends AbstractType
@@ -28,10 +29,11 @@ class MessageType extends AbstractType
         return 'message';
     }
 
-    public function getDefaultOptions(array $options)
+    public function setDefaultOptions(OptionsResolverInterface $resolver)
     {
-        return array(
-            'data_class' => 'KPhoen\ContactBundle\Model\Message',
-        );
+        $resolver->setDefaults(array(
+            'data_class'    => 'KPhoen\ContactBundle\Model\Message',
+            'intention'     => 'contact',
+        ));
     }
 }
