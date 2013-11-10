@@ -19,8 +19,8 @@ class ContactControllerTest extends WebTestCase
 
         $form = $crawler->selectButton('kphoen_contact_submit')->form();
         $form->setValues(array(
-            'message[sender_name]' => 'Joe',
-            'message[sender_mail]' => 'joe@joe.fr',
+            'contact_message[sender_name]' => 'Joe',
+            'contact_message[sender_mail]' => 'joe@joe.fr',
         ));
 
         // submit the form
@@ -36,10 +36,10 @@ class ContactControllerTest extends WebTestCase
 
         $form = $crawler->selectButton('kphoen_contact_submit')->form();
         $form->setValues(array(
-            'message[sender_name]'  => 'Joe',
-            'message[sender_mail]'  => 'joe@joe.fr',
-            'message[subject]'      => 'test subject',
-            'message[content]'      => 'test content !',
+            'contact_message[sender_name]'  => 'Joe',
+            'contact_message[sender_mail]'  => 'joe@joe.fr',
+            'contact_message[subject]'      => 'test subject',
+            'contact_message[content]'      => 'test content !',
         ));
 
         $crawler = $client->submit($form);
@@ -55,9 +55,10 @@ class ContactControllerTest extends WebTestCase
         list($mail) = $collector->getMessages();
 
         $this->assertTrue($mail instanceof \Swift_Message);
-        $this->assertContains('test content !', $mail->getBody());
+        $this->assertContains('test content !', (string) $mail);
         $this->assertEquals(array('foo@bar.baz' => ''), $mail->getTo());
-        $this->assertEquals(array('joe@joe.fr' => 'Joe'), $mail->getFrom());
+        $this->assertEquals(array('no-reply@bar.baz' => ''), $mail->getFrom());
+        $this->assertEquals(array('joe@joe.fr' => 'Joe'), $mail->getReplyTo());
         $this->assertEquals('test subject', $mail->getSubject());
     }
 }

@@ -26,7 +26,7 @@ class MessageType extends AbstractType
 
     public function getName()
     {
-        return 'message';
+        return 'contact_message';
     }
 
     public function setDefaultOptions(OptionsResolverInterface $resolver)

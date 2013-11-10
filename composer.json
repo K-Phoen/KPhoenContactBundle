@@ -12,12 +12,14 @@
         }
     ],
     "require": {
-        "symfony/symfony": ">=2.1.0",
-        "sensio/framework-extra-bundle": ">=2.1.0"
+        "symfony/swiftmailer-bundle": ">=2.1",
+        "symfony/framework-bundle": ">=2.1",
+        "sensio/framework-extra-bundle": ">=2.1",
+        "symfony/twig-bundle": ">=2.1",
+        "symfony/translation": ">=2.1"
     },
     "require-dev": {
-        "symfony/swiftmailer-bundle": "dev-master",
-        "symfony/framework-bundle": "2.*",
+        "symfony/symfony": ">=2.1",
         "phpunit/phpunit": "3.7.*"
     },
     "autoload": {

@@ -1,9 +1,13 @@
 contact:
     title:       Contact
 
+    message:
+        sent.you: Vous a envoyé un message
+
     submit:
         button:  Envoyer
         success: Message envoyé !
+        error:   "Impossible d'envoyer le message."
 
     form:
         sender_name: Nom
