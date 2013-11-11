@@ -7,8 +7,7 @@ use Symfony\Component\HttpFoundation\Request;
 
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 
-use KPhoen\ContactBundle\EventDispatcher\ContactEvents;
-use KPhoen\ContactBundle\EventDispatcher\Event\ContactEvent;
+use KPhoen\ContactBundle\Form\Handler\ContactFormHandler;
 use KPhoen\ContactBundle\Model\Message;
 
 
@@ -32,36 +31,23 @@ class ContactController extends Controller
     public function contactSendAction(Request $request)
     {
         list($message, $form) = $this->getForm();
-        $form->bind($request);
+        $handler = new ContactFormHandler($form, $this->get('event_dispatcher'), $this->get('mailer'));
 
-        if ($form->isValid()) {
-            $event = new ContactEvent($message);
-
-            $this->get('event_dispatcher')->dispatch(ContactEvents::PRE_MESSAGE_SEND, $event);
-
-            if ($event->getReceiver() === null) {
-                return $this->redirectError('Impossible to determine the receiver');
-            }
-
-            if ($event->getSender() === null) {
-                return $this->redirectError('Impossible to determine the sender');
-            }
-
-            if ($event->getSwiftMessage() === null) {
-                return $this->redirectError('The Swift_Message instance has not been built');
-            }
-
-            $this->get('mailer')->send($event->getSwiftMessage());
-            $this->get('event_dispatcher')->dispatch(ContactEvents::POST_MESSAGE_SEND, $event);
-
-            $this->get('session')->getFlashBag()->add('notice', $this->translate('contact.submit.success'));
-
-            return $this->redirect($this->generateUrl($this->container->getParameter('kphoen_contact.redirect_url')));
+        try {
+            $valid = $handler->handle($request, $message);
+        } catch (\RuntimeException $e) {
+            return $this->redirectError($e->getMessage());
         }
 
-        return array(
-            'form' => $form->createView()
-        );
+        if (!$valid) {
+            return array(
+                'form' => $form->createView()
+            );
+        }
+
+        $this->get('session')->getFlashBag()->add('notice', $this->translate('contact.submit.success'));
+
+        return $this->redirect($this->generateUrl($this->container->getParameter('kphoen_contact.redirect_url')));
     }
 
     protected function getForm()
@@ -82,8 +68,8 @@ class ContactController extends Controller
     protected function redirectError($errorMsg)
     {
         $this->get('logger')->crit('[ContactBundle] '.$errorMsg);
-
         $this->get('session')->getFlashBag()->add('error', $this->translate('contact.submit.error'));
+
         return $this->redirect($this->generateUrl($this->container->getParameter('kphoen_contact.redirect_url')));
     }
 }

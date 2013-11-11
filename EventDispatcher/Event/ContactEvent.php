@@ -4,6 +4,7 @@ namespace KPhoen\ContactBundle\EventDispatcher\Event;
 
 use Swift_Message;
 use Symfony\Component\EventDispatcher\Event;
+use Symfony\Component\HttpFoundation\Request;
 
 use KPhoen\ContactBundle\Model\Message;
 
@@ -13,6 +14,11 @@ class ContactEvent extends Event
      * @var Swift_Message
      */
     protected $swiftMessage;
+
+    /**
+     * @var Request
+     */
+    protected $request;
 
     /**
      * @var Message
@@ -32,9 +38,18 @@ class ContactEvent extends Event
     /**
      * @param Contact $contact
      */
-    public function __construct(Message $message)
+    public function __construct(Request $request, Message $message)
     {
+        $this->redirect = $request;
         $this->message = $message;
+    }
+
+    /**
+     * @return Request
+     */
+    public function getRequest()
+    {
+        return $this->request;
     }
 
     /**
