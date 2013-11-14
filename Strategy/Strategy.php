@@ -2,7 +2,9 @@
 
 namespace KPhoen\ContactBundle\Strategy;
 
+use Symfony\Component\HttpFoundation\Request;
+
 interface Strategy
 {
-    public function getAddress();
+    public function getAddress(Request $request);
 }

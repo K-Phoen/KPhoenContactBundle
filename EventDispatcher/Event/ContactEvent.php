@@ -40,7 +40,7 @@ class ContactEvent extends Event
      */
     public function __construct(Request $request, Message $message)
     {
-        $this->redirect = $request;
+        $this->request = $request;
         $this->message = $message;
     }
 

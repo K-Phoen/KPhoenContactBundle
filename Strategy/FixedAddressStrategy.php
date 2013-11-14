@@ -2,6 +2,8 @@
 
 namespace KPhoen\ContactBundle\Strategy;
 
+use Symfony\Component\HttpFoundation\Request;
+
 class FixedAddressStrategy implements Strategy
 {
     protected $address;
@@ -11,7 +13,7 @@ class FixedAddressStrategy implements Strategy
         $this->address = $address;
     }
 
-    public function getAddress()
+    public function getAddress(Request $request)
     {
         return $this->address;
     }

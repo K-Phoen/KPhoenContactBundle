@@ -26,6 +26,6 @@ class SenderListener implements EventSubscriberInterface
 
     public function preSend(ContactEvent $event)
     {
-        $event->setSender($this->strategy->getAddress());
+        $event->setSender($this->strategy->getAddress($event->getRequest()));
     }
 }
