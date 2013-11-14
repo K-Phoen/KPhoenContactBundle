@@ -47,9 +47,10 @@ The following options are available in the `app/config/config.yml` file:
 
 ```yaml
 k_phoen_contact:
-    to:           foo@bar.baz
-    redirect_url: homepage      # the url to retirect the user to once the mail
-                                # is sent
+    redirect_url:       homepage  # the url to redirect the user to once the
+                                  # mail is sent
+    sender:             { address: 'no-reply@foo.org' }
+    receiver:           { address: 'contact@foo.org' }
 ```
 
 ## Routing
