@@ -78,6 +78,7 @@ will override the templates exposed by the contact bundle.
 In `app/Resources/KPhoenContactBundle/views/Contact/contact.html`:
 
 ```jinja
+{% raw %}
 {% extends 'AcmeDemoBundle::layout.html.twig' %}
 
 {% block title %}Contact{% endblock %}
@@ -87,6 +88,7 @@ In `app/Resources/KPhoenContactBundle/views/Contact/contact.html`:
 
 {% include "KPhoenContactBundle:Contact:form.html.twig" with {'form': form} %}
 {% endblock %}
+{% endraw %}
 ```
 
 ## Events
