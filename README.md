@@ -4,7 +4,7 @@
 
 Yet another contact bundle.
 
-## Instalation
+## Installation
 
 ### Composer
 
