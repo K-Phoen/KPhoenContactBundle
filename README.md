@@ -61,7 +61,7 @@ which correspond to a simple contact form.
 You will probably need to customize the view used by the bundle. To do that, we
 will override the templates exposed by the contact bundle.
 
-In `app/Resources/KPhoenContactBundle/views/Contact/contact.html`:
+In `app/Resources/KPhoenContactBundle/views/Contact/contact.html.twig`:
 
 ```jinja
 {% extends 'AcmeDemoBundle::layout.html.twig' %}
@@ -82,6 +82,6 @@ Two events are emitted during the submission of the event form:
  * `contact.pre_send`: emitted just before the mail is sent ;
  * `contact.post_send`: emitted just after.
 
-## Licence
+## License
 
-MIT. See the LICENCE file.
+MIT. See the LICENSE file.
