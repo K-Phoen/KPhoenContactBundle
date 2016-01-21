@@ -24,7 +24,6 @@
         "phpunit/phpunit": "~5.1"
     },
     "autoload": {
-        "psr-0": { "KPhoen\\ContactBundle": "" }
-    },
-    "target-dir": "KPhoen/ContactBundle"
+        "psr-4": { "KPhoen\\ContactBundle\\": "" }
+    }
 }
