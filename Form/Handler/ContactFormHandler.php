@@ -26,7 +26,7 @@ class ContactFormHandler
 
     public function handle(Request $request, Message $message)
     {
-        $this->form->bind($request);
+        $this->form->handleRequest($request);
 
         if (!$this->form->isValid()) {
             return false;

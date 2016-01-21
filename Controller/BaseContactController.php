@@ -2,6 +2,7 @@
 
 namespace KPhoen\ContactBundle\Controller;
 
+use KPhoen\ContactBundle\Form\Type\MessageType;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\Form\FormInterface;
 use Symfony\Component\HttpFoundation\Request;
@@ -34,7 +35,7 @@ abstract class BaseContactController extends Controller
     protected function getContactForm()
     {
         $message = new Message();
-        $form = $this->createForm('contact_message', $message, array(
+        $form = $this->createForm(MessageType::class, $message, array(
             'translation_domain' => 'KPhoenContactBundle'
         ));
 
