@@ -21,7 +21,7 @@
     },
     "require-dev": {
         "symfony/symfony": "^2.7|^3.0",
-        "phpunit/phpunit": "~5.1"
+        "phpunit/phpunit": "~4.8"
     },
     "autoload": {
         "psr-4": { "KPhoen\\ContactBundle\\": "" }
