@@ -29,9 +29,9 @@ class MessageBuilderListener implements EventSubscriberInterface
 
     public static function getSubscribedEvents()
     {
-        return array(
-            ContactEvents::PRE_MESSAGE_SEND => array('preSend', -255),
-        );
+        return [
+            ContactEvents::PRE_MESSAGE_SEND => ['preSend', -255],
+        ];
     }
 
     public function preSend(ContactEvent $event)
@@ -46,13 +46,13 @@ class MessageBuilderListener implements EventSubscriberInterface
     protected function buildSwiftMessage(ContactEvent $event)
     {
         $message = $event->getMessage();
-        $translatorArgs = array(
+        $translatorArgs = [
             '%sender_name%' => $message->sender_name,
             '%sender_mail%' => $message->sender_mail,
             '%subject%'     => $message->subject,
             '%content%'     => $message->content,
-        );
-        $templateArgs = array('event' => $event, 'message' => $message);
+        ];
+        $templateArgs = ['event' => $event, 'message' => $message];
 
         $swiftMessage = new \Swift_Message($this->translate($message->subject, $translatorArgs));
 
@@ -71,12 +71,12 @@ class MessageBuilderListener implements EventSubscriberInterface
         return $swiftMessage;
     }
 
-    protected function translate($key, $args = array())
+    protected function translate($key, $args = [])
     {
         return $this->translator->trans($key, $args, 'KPhoenContactBundle');
     }
 
-    protected function render($template, $args = array())
+    protected function render($template, $args = [])
     {
         return $this->templating->render($template, $args);
     }

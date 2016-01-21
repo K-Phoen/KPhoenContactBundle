@@ -39,7 +39,7 @@ abstract class BaseContactController extends Controller
             'translation_domain' => 'KPhoenContactBundle'
         ));
 
-        return array($message, $form);
+        return [$message, $form];
     }
 
     protected function translate($key, $args = array())

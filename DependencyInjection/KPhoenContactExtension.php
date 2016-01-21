@@ -56,9 +56,9 @@ class KPhoenContactExtension extends Extension
             $loader->load($parameterBag->resolveValue($factory));
         }
 
-        return array(
-            'receiver'  => $tempContainer->get(sprintf('contact.strategy.%s.factory', $config['receiver_strategy'])),
-            'sender'    => $tempContainer->get(sprintf('contact.strategy.%s.factory', $config['sender_strategy'])),
-        );
+        return [
+            'receiver' => $tempContainer->get(sprintf('contact.strategy.%s.factory', $config['receiver_strategy'])),
+            'sender' => $tempContainer->get(sprintf('contact.strategy.%s.factory', $config['sender_strategy'])),
+        ];
     }
 }

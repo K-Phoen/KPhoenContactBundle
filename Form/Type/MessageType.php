@@ -12,18 +12,18 @@ class MessageType extends AbstractType
 {
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
-        $builder->add('sender_name', TextType::class, array(
+        $builder->add('sender_name', TextType::class, [
             'label' => 'contact.form.sender_name'
-        ));
-        $builder->add('sender_mail', EmailType::class, array(
+        ]);
+        $builder->add('sender_mail', EmailType::class, [
             'label' => 'contact.form.sender_mail'
-        ));
-        $builder->add('subject', TextType::class, array(
+        ]);
+        $builder->add('subject', TextType::class, [
             'label' => 'contact.form.subject'
-        ));
-        $builder->add('content', TextareaType::class, array(
+        ]);
+        $builder->add('content', TextareaType::class, [
             'label' => 'contact.form.content'
-        ));
+        ]);
     }
 
     public function getName()
@@ -33,9 +33,9 @@ class MessageType extends AbstractType
 
     public function configureOptions(OptionsResolver $resolver)
     {
-        $resolver->setDefaults(array(
+        $resolver->setDefaults([
             'data_class' => 'KPhoen\ContactBundle\Model\Message',
             'intention'  => 'contact',
-        ));
+        ]);
     }
 }

@@ -19,10 +19,10 @@ class ContactController extends BaseContactController
             return $res;
         }
 
-        return array(
-            'form'          => $form->createView(),
-            'route'         => 'contact_send',
-            'route_args'    => array(),
-        );
+        return [
+            'form' => $form->createView(),
+            'route' => 'contact_send',
+            'route_args' => [],
+        ];
     }
 }

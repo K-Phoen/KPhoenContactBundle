@@ -19,9 +19,9 @@ class ReceiverListener implements EventSubscriberInterface
 
     public static function getSubscribedEvents()
     {
-        return array(
+        return [
             ContactEvents::PRE_MESSAGE_SEND => 'preSend',
-        );
+        ];
     }
 
     public function preSend(ContactEvent $event)

@@ -2,10 +2,6 @@
 
 namespace KPhoen\ContactBundle\Model;
 
-
-/**
- * This class represents a message.
- */
 class Message
 {
     public $sender_name;
