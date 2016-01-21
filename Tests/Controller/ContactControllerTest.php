@@ -18,10 +18,9 @@ class ContactControllerTest extends WebTestCase
         );
 
         $form = $crawler->selectButton('kphoen_contact_submit')->form();
-        $form->setValues(array(
-            'contact_message[sender_name]' => 'Joe',
-            'contact_message[sender_mail]' => 'joe@joe.fr',
-        ));
+
+        $form->get('message[sender_name]')->setValue('Joe');
+        $form->get('message[sender_mail]')->setValue('joe@joe.fr');
 
         // submit the form
         $crawler = $client->submit($form);
@@ -36,10 +35,10 @@ class ContactControllerTest extends WebTestCase
 
         $form = $crawler->selectButton('kphoen_contact_submit')->form();
         $form->setValues(array(
-            'contact_message[sender_name]'  => 'Joe',
-            'contact_message[sender_mail]'  => 'joe@joe.fr',
-            'contact_message[subject]'      => 'test subject',
-            'contact_message[content]'      => 'test content !',
+            'message[sender_name]'  => 'Joe',
+            'message[sender_mail]'  => 'joe@joe.fr',
+            'message[subject]'      => 'test subject',
+            'message[content]'      => 'test content !',
         ));
 
         $crawler = $client->submit($form);
