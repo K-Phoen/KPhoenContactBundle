@@ -4,12 +4,6 @@
 
 Yet another contact bundle.
 
-## Status
-
-This project is **DEPRECATED** and should NOT be used. 
-
-If someone magically appears and wants to maintain this project, I'll gladly give access to this repository.
-
 ## Installation
 
 ### Composer
