@@ -1,9 +1,8 @@
 ---
 services:
     contact.listener.message_builder:
-        class: >
-          KPhoen\ContactBundle\EventDispatcher\
-          Listener\MessageBuilderListener
+        class: >-
+          KPhoen\ContactBundle\EventDispatcher\Listener\MessageBuilderListener
         arguments: ["@translator", "@templating"]
         tags:
             - {name: kernel.event_subscriber}
