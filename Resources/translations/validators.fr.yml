@@ -1,4 +1,8 @@
-message.sender_name.minlength: '[0,Inf] Votre nom doit comporter au moins {{ limit }} caractères.'
+---
+message.sender_name.minlength: >
+  '[0,Inf] Votre nom doit comporter au moins {{ limit }} caractères.'
 message.sender_mail.email: L'adresse "{{ value }}" n'est pas valide.
-message.subject.minlength: '[0,Inf] Le sujet doit comporter au moins {{ limit }} caractères.'
-message.content.minlength: '[0,Inf] Le message doit comporter au moins {{ limit }} caractères.'
+message.subject.minlength: >
+  '[0,Inf] Le sujet doit comporter au moins {{ limit }} caractères.'
+message.content.minlength: >
+  '[0,Inf] Le message doit comporter au moins {{ limit }} caractères.'

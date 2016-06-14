@@ -1,13 +1,14 @@
+---
 contact:
-    title:       Contact
+    title: Contact
 
     message:
         sent.you: Sent you a message
 
     submit:
-        button:  Send
+        button: Send
         success: Message sent!
-        error:   An error occured.
+        error: An error occured.
 
     form:
         sender_name: Name
