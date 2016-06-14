@@ -2,5 +2,5 @@
 services:
     contact.strategy.fixed.factory:
         class: >
-          "KPhoen\ContactBundle\DependencyInjection\
-          \Factory\FixedStrategyFactory"
+          KPhoen\ContactBundle\DependencyInjection\
+          Factory\FixedStrategyFactory
