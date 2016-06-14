@@ -3,4 +3,4 @@ services:
     contact.strategy.fixed.factory:
         class: >-
           KPhoen\ContactBundle\DependencyInjection
-          \Factory\FixedStrategyFactory
+            \Factory\FixedStrategyFactory
