@@ -1,6 +1,6 @@
 ---
 services:
     contact.strategy.fixed.factory:
-        class: >
+        class: >-
           "KPhoen\\ContactBundle\\DependencyInjection\
           \\Factory\\FixedStrategyFactory"
