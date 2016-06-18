@@ -1,8 +1,9 @@
+---
 parameters:
     contact.form.type.message.class: KPhoen\ContactBundle\Form\Type\MessageType
 
 services:
     contact.form.type.message:
-        class: %contact.form.type.message.class%
+        class: '%contact.form.type.message.class%'
         tags:
-            - { name: form.type, alias: contact_message }
+            - {name: form.type, alias: contact_message}
