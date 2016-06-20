@@ -85,10 +85,6 @@ Two events are emitted during the submission of the event form:
  * `contact.pre_send`: emitted just before the mail is sent ;
  * `contact.post_send`: emitted just after.
 
-## License
-
-MIT. See the [LICENSE](https://github.com/K-Phoen/KPhoenContactBundle/blob/3.0/LICENCE) file.
-
 ## Contributing
 
 See the [CONTRIBUTING](https://github.com/K-Phoen/KPhoenContactBundle/blob/3.0/CONTRIBUTING.md) file.
