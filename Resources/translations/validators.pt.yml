@@ -1,0 +1,8 @@
+---
+message.sender_name.minlength: >-
+  '[0,Inf] O seu apelido deve ter pelo menos {{ limit }} carácteres.'
+message.sender_mail.email: O endereço "{{ value }}" não é válida.
+message.subject.minlength: >-
+  '[0,Inf] O tema deve ter pelo menos {{ limit }} carácteres.'
+message.content.minlength: >-
+  '[0,Inf] A mensagem deve ter pelo menos {{ limit }} carácteres.'

@@ -1,0 +1,16 @@
+contact:
+    title: Contacto
+
+    message:
+        sent.you: Le ha enviado un mensaje
+
+    submit:
+        button: Enviar
+        success: ¡ Mensaje enviado !
+        error: Imposible enviar el mensaje
+
+    form:
+        sender_name: Apellido
+        sender_mail: Dirección de correo electrónico
+        subject: Tema
+        content: Mensaje
