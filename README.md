@@ -87,4 +87,8 @@ Two events are emitted during the submission of the event form:
 
 ## License
 
-MIT. See the LICENSE file.
+MIT. See the [LICENSE](https://github.com/K-Phoen/KPhoenContactBundle/blob/3.0/LICENCE) file.
+
+## Contributing
+
+See the [CONTRIBUTING](https://github.com/K-Phoen/KPhoenContactBundle/blob/3.0/CONTRIBUTING.md) file.
