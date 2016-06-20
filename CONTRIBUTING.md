@@ -13,7 +13,7 @@ You need git to get the source code.
 
 ### Cloning the repository
 
-    $ git clone
+    $ git clone https://github.com/K-Phoen/KPhoenContactBundle.git
 
 ## Getting the dependencies
 
