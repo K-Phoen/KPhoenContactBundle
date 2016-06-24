@@ -1,5 +1,9 @@
 # KPhoenContactBundle contribution guideline
 
+## Submitting a new issue
+
+Coming soon.
+
 ## Getting the source code
 
 ### Getting git
@@ -51,3 +55,7 @@ Coming soon.
 
     $ cd KPhoenContactBundle/
     $ ./vendor/bin/phpunit
+
+## Submitting a pull request
+
+Create a fork of the repository. Make your changes, make sure you use our coding conventions then run tests. Push your changes to your fork. Create a pull request from your fork to the original repository describing your changes. Later, if you want to submit another pull request, make sure you [synced your fork](https://help.github.com/articles/syncing-a-fork/).
