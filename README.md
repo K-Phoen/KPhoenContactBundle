@@ -1,6 +1,9 @@
 # KPhoenContactBundle
 
 [![Build Status](https://travis-ci.org/K-Phoen/KPhoenContactBundle.png?branch=master)](https://travis-ci.org/K-Phoen/KPhoenContactBundle)
+[![Latest stable release](https://img.shields.io/github/release/K-Phoen/KPhoenContactBundle.svg?maxAge=2592000)](https://github.com/K-Phoen/KPhoenContactBundle/releases)
+[![Overall downloads on Packagist](https://img.shields.io/packagist/dt/kphoen/contact-bundle.svg?maxAge=2592000)](https://packagist.org/packages/kphoen/contact-bundle)
+[![license](https://img.shields.io/github/license/K-Phoen/KPhoenContactBundle.svg?maxAge=2592000)](https://github.com/K-Phoen/KPhoenContactBundle/blob/3.0/LICENCE)
 
 Yet another contact bundle.
 
@@ -82,6 +85,6 @@ Two events are emitted during the submission of the event form:
  * `contact.pre_send`: emitted just before the mail is sent ;
  * `contact.post_send`: emitted just after.
 
-## License
+## Contributing
 
-MIT. See the LICENSE file.
+See the [CONTRIBUTING](https://github.com/K-Phoen/KPhoenContactBundle/blob/3.0/CONTRIBUTING.md) file.
