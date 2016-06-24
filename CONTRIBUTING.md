@@ -28,16 +28,24 @@ You need composer to install the dependencies.
 
 ### Installing the dependencies
 
-    $ cd KPhoenContactBundle
+    $ cd KPhoenContactBundle/
     $ composer update
 
 ## Coding conventions
 
 ### PHP
 
+Coming soon.
+
 ### YAML
 
-### Twing and HTML
+We are using [yamllint](https://github.com/adrienverge/yamllint) with the default configuration:
+
+    $ yamllint ./Controller/ ./DependencyInjection/ ./EventDispatcher/ ./Form/ ./Model/ ./Resources/ ./Strategy/ ./Tests/ .travis.yml
+
+### Twig and HTML
+
+Coming soon.
 
 ## Testing
 
