@@ -16,3 +16,6 @@ install:
   - composer install --prefer-source
 
 script: ./vendor/bin/phpunit
+
+notifications:
+  email: false
