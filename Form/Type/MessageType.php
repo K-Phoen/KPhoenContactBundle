@@ -1,4 +1,5 @@
 <?php
+
 namespace KPhoen\ContactBundle\Form\Type;
 
 use Symfony\Component\Form\AbstractType;
@@ -13,16 +14,16 @@ class MessageType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder->add('sender_name', TextType::class, [
-            'label' => 'contact.form.sender_name'
+            'label' => 'contact.form.sender_name',
         ]);
         $builder->add('sender_mail', EmailType::class, [
-            'label' => 'contact.form.sender_mail'
+            'label' => 'contact.form.sender_mail',
         ]);
         $builder->add('subject', TextType::class, [
-            'label' => 'contact.form.subject'
+            'label' => 'contact.form.subject',
         ]);
         $builder->add('content', TextareaType::class, [
-            'label' => 'contact.form.content'
+            'label' => 'contact.form.content',
         ]);
     }
 
@@ -35,7 +36,7 @@ class MessageType extends AbstractType
     {
         $resolver->setDefaults([
             'data_class' => 'KPhoen\ContactBundle\Model\Message',
-            'intention'  => 'contact',
+            'intention' => 'contact',
         ]);
     }
 }

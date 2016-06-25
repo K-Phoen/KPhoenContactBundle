@@ -5,7 +5,6 @@ namespace KPhoen\ContactBundle\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 use Symfony\Component\HttpFoundation\Request;
 
-
 class ContactController extends BaseContactController
 {
     /**

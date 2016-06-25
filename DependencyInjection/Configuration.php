@@ -34,7 +34,6 @@ class Configuration implements ConfigurationInterface
             ->children()
                 ->scalarNode('redirect_url')->defaultValue('homepage')->end()
             ->end();
-
     }
 
     protected function addStrategiesNode(ArrayNodeDefinition $rootNode)

@@ -2,8 +2,6 @@
 
 namespace KPhoen\ContactBundle\Tests\Form\Handler;
 
-use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
-
 use KPhoen\ContactBundle\EventDispatcher\ContactEvents;
 use KPhoen\ContactBundle\Form\Handler\ContactFormHandler;
 use KPhoen\ContactBundle\Model\Message;
@@ -39,8 +37,9 @@ class ContactFormHandlerTest extends \PHPUnit_Framework_TestCase
             ->method('dispatch')
             ->with(
                 ContactEvents::PRE_MESSAGE_SEND,
-                $this->callback(function($event) {
+                $this->callback(function ($event) {
                     $event->setReceiver('lala');
+
                     return true;
                 })
             );
@@ -61,9 +60,10 @@ class ContactFormHandlerTest extends \PHPUnit_Framework_TestCase
             ->method('dispatch')
             ->with(
                 ContactEvents::PRE_MESSAGE_SEND,
-                $this->callback(function($event) {
+                $this->callback(function ($event) {
                     $event->setReceiver('lala');
                     $event->setSender('lala');
+
                     return true;
                 })
             );
@@ -74,17 +74,18 @@ class ContactFormHandlerTest extends \PHPUnit_Framework_TestCase
 
     public function testHandle()
     {
-        $swiftMessage = $this->getMockBuilder('\Swift_Message')->disableOriginalConstructor()->getMock();;
+        $swiftMessage = $this->getMockBuilder('\Swift_Message')->disableOriginalConstructor()->getMock();
         $dispatcher = $this->getDispatcher();
         $dispatcher
             ->expects($this->at(0))
             ->method('dispatch')
             ->with(
                 ContactEvents::PRE_MESSAGE_SEND,
-                $this->callback(function($event) use ($swiftMessage) {
+                $this->callback(function ($event) use ($swiftMessage) {
                     $event->setReceiver('lala');
                     $event->setSender('lala');
                     $event->setSwiftMessage($swiftMessage);
+
                     return true;
                 })
             );
