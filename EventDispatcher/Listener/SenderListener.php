@@ -3,7 +3,6 @@
 namespace KPhoen\ContactBundle\EventDispatcher\Listener;
 
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
-
 use KPhoen\ContactBundle\EventDispatcher\ContactEvents;
 use KPhoen\ContactBundle\EventDispatcher\Event\ContactEvent;
 use KPhoen\ContactBundle\Strategy\Strategy;

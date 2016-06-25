@@ -6,10 +6,8 @@ use KPhoen\ContactBundle\Form\Type\MessageType;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\Form\FormInterface;
 use Symfony\Component\HttpFoundation\Request;
-
 use KPhoen\ContactBundle\Form\Handler\ContactFormHandler;
 use KPhoen\ContactBundle\Model\Message;
-
 
 abstract class BaseContactController extends Controller
 {
@@ -24,7 +22,7 @@ abstract class BaseContactController extends Controller
         }
 
         if (!$valid) {
-            return null;
+            return;
         }
 
         $this->get('session')->getFlashBag()->add('notice', $this->translate('contact.submit.success'));
@@ -36,7 +34,7 @@ abstract class BaseContactController extends Controller
     {
         $message = new Message();
         $form = $this->createForm(MessageType::class, $message, array(
-            'translation_domain' => 'KPhoenContactBundle'
+            'translation_domain' => 'KPhoenContactBundle',
         ));
 
         return [$message, $form];
