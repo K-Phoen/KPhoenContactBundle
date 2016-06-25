@@ -39,13 +39,13 @@ You need composer to install the dependencies.
 
 ### PHP
 
-Coming soon.
+We are using [Style CI](https://styleci.io/)'s [Symfone template](https://styleci.readme.io/docs/presets#symfony), but you don't have to bother with it as it will open PR to correct mistakes automatically.
 
 ### YAML
 
 We are using [yamllint](https://github.com/adrienverge/yamllint) with the default configuration:
 
-    $ yamllint ./Controller/ ./DependencyInjection/ ./EventDispatcher/ ./Form/ ./Model/ ./Resources/ ./Strategy/ ./Tests/ .travis.yml
+    $ yamllint ./Controller/ ./DependencyInjection/ ./EventDispatcher/ ./Form/ ./Model/ ./Resources/ ./Strategy/ ./Tests/ .travis.yml .styleci.yml
 
 ### Twig and HTML
 
