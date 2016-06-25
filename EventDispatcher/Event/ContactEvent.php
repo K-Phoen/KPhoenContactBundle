@@ -5,7 +5,6 @@ namespace KPhoen\ContactBundle\EventDispatcher\Event;
 use Swift_Message;
 use Symfony\Component\EventDispatcher\Event;
 use Symfony\Component\HttpFoundation\Request;
-
 use KPhoen\ContactBundle\Model\Message;
 
 class ContactEvent extends Event

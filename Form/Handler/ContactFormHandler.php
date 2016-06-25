@@ -6,7 +6,6 @@ use Swift_Mailer;
 use Symfony\Component\EventDispatcher\EventDispatcherInterface;
 use Symfony\Component\Form\FormInterface;
 use Symfony\Component\HttpFoundation\Request;
-
 use KPhoen\ContactBundle\EventDispatcher\ContactEvents;
 use KPhoen\ContactBundle\EventDispatcher\Event\ContactEvent;
 use KPhoen\ContactBundle\Model\Message;

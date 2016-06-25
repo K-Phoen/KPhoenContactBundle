@@ -4,7 +4,6 @@ namespace KPhoen\ContactBundle\Tests\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
 
-
 class ContactControllerTest extends WebTestCase
 {
     public function testContact()
@@ -35,10 +34,10 @@ class ContactControllerTest extends WebTestCase
 
         $form = $crawler->selectButton('kphoen_contact_submit')->form();
         $form->setValues([
-            'message[sender_name]'  => 'Joe',
-            'message[sender_mail]'  => 'joe@joe.fr',
-            'message[subject]'      => 'test subject',
-            'message[content]'      => 'test content !',
+            'message[sender_name]' => 'Joe',
+            'message[sender_mail]' => 'joe@joe.fr',
+            'message[subject]' => 'test subject',
+            'message[content]' => 'test content !',
         ]);
 
         $crawler = $client->submit($form);

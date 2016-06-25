@@ -5,7 +5,6 @@ namespace KPhoen\ContactBundle\EventDispatcher\Listener;
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
 use Symfony\Component\Templating\EngineInterface;
 use Symfony\Component\Translation\TranslatorInterface;
-
 use KPhoen\ContactBundle\EventDispatcher\ContactEvents;
 use KPhoen\ContactBundle\EventDispatcher\Event\ContactEvent;
 
@@ -49,8 +48,8 @@ class MessageBuilderListener implements EventSubscriberInterface
         $translatorArgs = [
             '%sender_name%' => $message->sender_name,
             '%sender_mail%' => $message->sender_mail,
-            '%subject%'     => $message->subject,
-            '%content%'     => $message->content,
+            '%subject%' => $message->subject,
+            '%content%' => $message->content,
         ];
         $templateArgs = ['event' => $event, 'message' => $message];
 

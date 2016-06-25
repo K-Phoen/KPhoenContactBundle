@@ -8,7 +8,6 @@ use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\Loader\YamlFileLoader;
 use Symfony\Component\HttpKernel\DependencyInjection\Extension;
 
-
 class KPhoenContactExtension extends Extension
 {
     public function load(array $configs, ContainerBuilder $container)
@@ -38,9 +37,9 @@ class KPhoenContactExtension extends Extension
     }
 
     /**
-     * Creates the strategy factories
+     * Creates the strategy factories.
      *
-     * @param array $config
+     * @param array            $config
      * @param ContainerBuilder $container
      */
     protected function createStrategyFactories($config, ContainerBuilder $container)
