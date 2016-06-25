@@ -3,6 +3,6 @@
 {% block body %}
 <h2>{% trans from "KPhoenContactBundle" %}contact.title{% endtrans %}</h2>
 
-{% include "KPhoenContactBundle:Contact:form.html.twig" with {'form': form} %}
+{% include "KPhoenContactBundle:Contact:form.html.twig" with {'form': form, 'route': route, 'route_args': route_args} %}
 
 {% endblock %}

@@ -1,0 +1,5 @@
+preset: symfony
+
+risky: false
+
+linting: true

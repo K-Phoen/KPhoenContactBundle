@@ -1,4 +1,4 @@
-<form class="contact" action="{{ path('contact_send') }}" method="post" {{ form_enctype(form) }}>
+{{ form_start(form, { 'action': path(route, route_args), 'attr': { 'class': 'contact' } }) }}
     {{ form_errors(form) }}
 
     {{ form_row(form.sender_name) }}
@@ -9,4 +9,4 @@
     {{ form_rest(form) }}
 
     <input type="submit" id="kphoen_contact_submit" value="{% trans from "KPhoenContactBundle" %}contact.submit.button{% endtrans %}" />
-</form>
+{{ form_end(form) }}

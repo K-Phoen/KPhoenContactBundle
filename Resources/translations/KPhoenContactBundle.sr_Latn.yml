@@ -1,0 +1,17 @@
+---
+contact:
+    title: Kontakt
+
+    message:
+        sent.you: Poslao poruku
+
+    submit:
+        button: Pošalji
+        success: Poruka poslata!
+        error: Došlo je do greške.
+
+    form:
+        sender_name: Ime
+        sender_mail: Email
+        subject: Naslov
+        content: Poruka

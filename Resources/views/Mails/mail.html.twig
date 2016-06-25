@@ -1,0 +1,10 @@
+<h1>
+    {{ message.sender_name }} ({{ message.sender_mail }})
+    {% trans from 'KPhoenContactBundle' %}contact.message.sent.you{% endtrans %} :
+</h1>
+
+<h2>{{ message.subject }}</h2>
+
+<p>
+    {{ message.content|nl2br }}
+</p>
