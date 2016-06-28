@@ -4,7 +4,7 @@
 [![StyleCI](https://styleci.io/repos/7018780/shield)](https://styleci.io/repos/7018780)
 [![Latest stable release](https://img.shields.io/github/release/K-Phoen/KPhoenContactBundle.svg?maxAge=2592000)](https://github.com/K-Phoen/KPhoenContactBundle/releases)
 [![Overall downloads on Packagist](https://img.shields.io/packagist/dt/kphoen/contact-bundle.svg?maxAge=2592000)](https://packagist.org/packages/kphoen/contact-bundle)
-[![license](https://img.shields.io/github/license/K-Phoen/KPhoenContactBundle.svg?maxAge=2592000)](https://github.com/K-Phoen/KPhoenContactBundle/blob/3.0/LICENCE)
+[![license](https://img.shields.io/github/license/K-Phoen/KPhoenContactBundle.svg?maxAge=2592000)](https://github.com/K-Phoen/KPhoenContactBundle/blob/master/LICENCE)
 
 Yet another contact bundle.
 
@@ -88,4 +88,4 @@ Two events are emitted during the submission of the event form:
 
 ## Contributing
 
-See the [CONTRIBUTING](https://github.com/K-Phoen/KPhoenContactBundle/blob/3.0/CONTRIBUTING.md) file.
+See the [CONTRIBUTING](https://github.com/K-Phoen/KPhoenContactBundle/blob/master/CONTRIBUTING.md) file.
