@@ -43,7 +43,7 @@ We are using [Style CI](https://styleci.io/)'s [Symfone template](https://stylec
 
 ### YAML
 
-We are using [yamllint](https://github.com/adrienverge/yamllint) with the default configuration:
+We are using [yamllint](https://github.com/adrienverge/yamllint) with our own configuration file, to follow the Symfony coding conventions as much as possible:
 
     $ yamllint ./Controller/ ./DependencyInjection/ ./EventDispatcher/ ./Form/ ./Model/ ./Resources/ ./Strategy/ ./Tests/ .travis.yml .styleci.yml .yamllint
 
