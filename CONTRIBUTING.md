@@ -45,7 +45,7 @@ We are using [Style CI](https://styleci.io/)'s [Symfone template](https://stylec
 
 We are using [yamllint](https://github.com/adrienverge/yamllint) with the default configuration:
 
-    $ yamllint ./Controller/ ./DependencyInjection/ ./EventDispatcher/ ./Form/ ./Model/ ./Resources/ ./Strategy/ ./Tests/ .travis.yml .styleci.yml
+    $ yamllint ./Controller/ ./DependencyInjection/ ./EventDispatcher/ ./Form/ ./Model/ ./Resources/ ./Strategy/ ./Tests/ .travis.yml .styleci.yml .yamllint
 
 ### Twig and HTML
 
