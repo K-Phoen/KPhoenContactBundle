@@ -1,20 +1,19 @@
----
 services:
     contact.listener.message_builder:
         class: >-
-          KPhoen\ContactBundle\EventDispatcher\Listener\MessageBuilderListener
+            KPhoen\ContactBundle\EventDispatcher\Listener\MessageBuilderListener
         arguments: ["@translator", "@templating"]
         tags:
-            - {name: kernel.event_subscriber}
+            - { name: kernel.event_subscriber }
 
     contact.listener.receiver:
         class: KPhoen\ContactBundle\EventDispatcher\Listener\ReceiverListener
         arguments: ["@contact.strategy.receiver"]
         tags:
-            - {name: kernel.event_subscriber}
+            - { name: kernel.event_subscriber }
 
     contact.listener.sender:
         class: KPhoen\ContactBundle\EventDispatcher\Listener\SenderListener
         arguments: ["@contact.strategy.sender"]
         tags:
-            - {name: kernel.event_subscriber}
+            - { name: kernel.event_subscriber }
