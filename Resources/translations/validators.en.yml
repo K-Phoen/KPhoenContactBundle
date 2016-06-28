@@ -1,8 +1,7 @@
----
 message.sender_name.minlength: >-
-  '[0,Inf] Your name should be at least {{ limit }} characters long.'
+    '[0,Inf] Your name should be at least {{ limit }} characters long.'
 message.sender_mail.email: The mail "{{ value }}" is not valid.
 message.subject.minlength: >-
-  '[0,Inf] The subject should be at least {{ limit }} characters long.'
+    '[0,Inf] The subject should be at least {{ limit }} characters long.'
 message.content.minlength: >-
-  '[0,Inf] The message should be at least {{ limit }} characters long.'
+    '[0,Inf] The message should be at least {{ limit }} characters long.'

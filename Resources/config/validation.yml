@@ -1,4 +1,3 @@
----
 KPhoen\ContactBundle\Model\Message:
     properties:
         sender_name:

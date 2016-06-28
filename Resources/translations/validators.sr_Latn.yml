@@ -1,8 +1,7 @@
----
 message.sender_name.minlength: >-
-  '[0,Inf] Vaše ime bi trebalo biti najmanje {{ limit }} karaktera dugačko.'
+    '[0,Inf] Vaše ime bi trebalo biti najmanje {{ limit }} karaktera dugačko.'
 message.sender_mail.email: Email "{{ value }}" nije validan.
 message.subject.minlength: >-
-  '[0,Inf] Naslov bi trebalo biti najmanje {{ limit }} karaktera dugačak.'
+    '[0,Inf] Naslov bi trebalo biti najmanje {{ limit }} karaktera dugačak.'
 message.content.minlength: >-
-  '[0,Inf] Poruka bi trebalo biti najmanje {{ limit }} karaktera dugačka.'
+    '[0,Inf] Poruka bi trebalo biti najmanje {{ limit }} karaktera dugačka.'
