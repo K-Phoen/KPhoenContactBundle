@@ -8,13 +8,17 @@ php:
     - 7.0
 
 before_install:
-    - phpenv config-rm xdebug.ini || true
     - composer self-update
 
 install:
     - composer install --prefer-source
 
-script: ./vendor/bin/phpunit
+script:
+  - mkdir -p build/logs
+  - ./vendor/bin/phpunit -c phpunit.xml.dist
+
+after_script:
+  - travis_retry php vendor/bin/coveralls -v
 
 notifications:
     email: false
