@@ -2,6 +2,7 @@
 
 [![Build Status](https://travis-ci.org/K-Phoen/KPhoenContactBundle.svg?branch=master)](https://travis-ci.org/K-Phoen/KPhoenContactBundle)
 [![StyleCI](https://styleci.io/repos/7018780/shield)](https://styleci.io/repos/7018780)
+[![Coverage Status](https://coveralls.io/repos/github/K-Phoen/KPhoenContactBundle/badge.svg?branch=master)](https://coveralls.io/github/K-Phoen/KPhoenContactBundle?branch=master)
 [![Latest stable release](https://img.shields.io/github/release/K-Phoen/KPhoenContactBundle.svg?maxAge=2592000)](https://github.com/K-Phoen/KPhoenContactBundle/releases)
 [![Overall downloads on Packagist](https://img.shields.io/packagist/dt/kphoen/contact-bundle.svg?maxAge=2592000)](https://packagist.org/packages/kphoen/contact-bundle)
 [![license](https://img.shields.io/github/license/K-Phoen/KPhoenContactBundle.svg?maxAge=2592000)](https://github.com/K-Phoen/KPhoenContactBundle/blob/master/LICENCE)
