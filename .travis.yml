@@ -15,7 +15,7 @@ install:
 
 script:
   - mkdir -p build/logs
-  - php -d xdebug.profiler_enable=on vendor/bin/phpunit -c phpunit.xml.dist
+  - ./vendor/bin/phpunit -c phpunit.xml.dist
 
 after_script:
   - travis_retry php vendor/bin/coveralls -v
