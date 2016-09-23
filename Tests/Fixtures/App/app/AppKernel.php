@@ -5,7 +5,7 @@ use Symfony\Component\Config\Loader\LoaderInterface;
 
 class AppKernel extends Kernel
 {
-    public function registerBundles()
+    public function registerBundles() : array
     {
         return array(
             new Symfony\Bundle\FrameworkBundle\FrameworkBundle(),
@@ -26,7 +26,7 @@ class AppKernel extends Kernel
     /**
      * @return string
      */
-    public function getCacheDir()
+    public function getCacheDir() : string
     {
         return sys_get_temp_dir().'/KPhoenContactBundle/cache';
     }
@@ -34,7 +34,7 @@ class AppKernel extends Kernel
     /**
      * @return string
      */
-    public function getLogDir()
+    public function getLogDir() : string
     {
         return sys_get_temp_dir().'/KPhoenContactBundle/logs';
     }

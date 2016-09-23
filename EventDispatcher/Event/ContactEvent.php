@@ -46,7 +46,7 @@ class ContactEvent extends Event
     /**
      * @return Request
      */
-    public function getRequest()
+    public function getRequest() : \Symfony\Component\HttpFoundation\Request
     {
         return $this->request;
     }
@@ -54,7 +54,7 @@ class ContactEvent extends Event
     /**
      * @return Message
      */
-    public function getMessage()
+    public function getMessage() : Message
     {
         return $this->message;
     }
@@ -78,7 +78,7 @@ class ContactEvent extends Event
     /**
      * @param string $receiver
      */
-    public function setReceiver($receiver)
+    public function setReceiver(string $receiver)
     {
         $this->receiver = $receiver;
     }
@@ -94,7 +94,7 @@ class ContactEvent extends Event
     /**
      * @param string $sender
      */
-    public function setSender($sender)
+    public function setSender(string $sender)
     {
         $this->sender = $sender;
     }

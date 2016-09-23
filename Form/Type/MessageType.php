@@ -27,7 +27,7 @@ class MessageType extends AbstractType
         ]);
     }
 
-    public function getName()
+    public function getName() : string
     {
         return 'contact_message';
     }

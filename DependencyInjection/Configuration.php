@@ -15,7 +15,7 @@ class Configuration implements ConfigurationInterface
         $this->strategies = $strategies;
     }
 
-    public function getConfigTreeBuilder()
+    public function getConfigTreeBuilder() : \Symfony\Component\Config\Definition\Builder\TreeBuilder
     {
         $treeBuilder = new TreeBuilder();
         $rootNode = $treeBuilder->root('k_phoen_contact');
@@ -36,7 +36,7 @@ class Configuration implements ConfigurationInterface
             ->end();
     }
 
-    protected function addStrategiesNode(ArrayNodeDefinition $rootNode)
+    protected function addStrategiesNode(ArrayNodeDefinition $rootNode) : \Symfony\Component\Config\Definition\Builder\ArrayNodeDefinition
     {
         foreach ($this->strategies as $name => $strategy) {
             $strategyNode = $rootNode->children()->arrayNode($name)->isRequired();
