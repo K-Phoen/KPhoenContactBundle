@@ -16,7 +16,7 @@ class SenderListener implements EventSubscriberInterface
         $this->strategy = $strategy;
     }
 
-    public static function getSubscribedEvents()
+    public static function getSubscribedEvents() : array
     {
         return [
             ContactEvents::PRE_MESSAGE_SEND => 'preSend',

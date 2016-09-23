@@ -30,7 +30,7 @@ abstract class BaseContactController extends Controller
         return $this->redirect($this->generateUrl($this->container->getParameter('kphoen_contact.redirect_url')));
     }
 
-    protected function getContactForm()
+    protected function getContactForm() : array
     {
         $message = new Message();
         $form = $this->createForm(MessageType::class, $message, array(
@@ -40,12 +40,12 @@ abstract class BaseContactController extends Controller
         return [$message, $form];
     }
 
-    protected function translate($key, $args = array())
+    protected function translate(string $key, array $args = array()) : string
     {
         return $this->get('translator')->trans($key, $args, 'KPhoenContactBundle');
     }
 
-    protected function redirectError($errorMsg)
+    protected function redirectError(string $errorMsg) : \Symfony\Component\HttpFoundation\Response
     {
         $this->get('logger')->crit('[ContactBundle] '.$errorMsg);
         $this->get('session')->getFlashBag()->add('error', $this->translate('contact.submit.error'));

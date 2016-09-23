@@ -10,7 +10,7 @@ class FixedStrategyFactory implements StrategyFactoryInterface
     /**
      * {@inheritdoc}
      */
-    public function create(ContainerBuilder $container, $id, array $config)
+    public function create(ContainerBuilder $container, string $id, array $config)
     {
         $definition = $container->register($id, 'KPhoen\ContactBundle\Strategy\FixedAddressStrategy');
         $definition->addArgument($config['address']);

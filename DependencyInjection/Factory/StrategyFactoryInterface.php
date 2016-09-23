@@ -19,7 +19,7 @@ interface StrategyFactoryInterface
      * @param string           $id        The id of the service
      * @param array            $config    An array of configuration
      */
-    public function create(ContainerBuilder $container, $id, array $config);
+    public function create(ContainerBuilder $container, string $id, array $config);
 
     /**
      * Adds configuration nodes for the strategy.

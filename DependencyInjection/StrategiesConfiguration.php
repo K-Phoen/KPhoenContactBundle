@@ -8,7 +8,7 @@ use Symfony\Component\Config\Definition\ConfigurationInterface;
 
 class StrategiesConfiguration implements ConfigurationInterface
 {
-    public function getConfigTreeBuilder()
+    public function getConfigTreeBuilder() : \Symfony\Component\Config\Definition\Builder\TreeBuilder
     {
         $treeBuilder = new TreeBuilder();
         $rootNode = $treeBuilder->root('k_phoen_contact');
@@ -18,7 +18,7 @@ class StrategiesConfiguration implements ConfigurationInterface
         return $treeBuilder;
     }
 
-    protected function addStrategiesNode(ArrayNodeDefinition $rootNode)
+    protected function addStrategiesNode(ArrayNodeDefinition $rootNode) : \Symfony\Component\Config\Definition\Builder\ArrayNodeDefinition
     {
         $rootNode
             ->ignoreExtraKeys()

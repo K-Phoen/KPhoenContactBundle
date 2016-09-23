@@ -42,7 +42,7 @@ class KPhoenContactExtension extends Extension
      * @param array            $config
      * @param ContainerBuilder $container
      */
-    protected function createStrategyFactories($config, ContainerBuilder $container)
+    protected function createStrategyFactories(array $config, ContainerBuilder $container) : array
     {
         // load bundled adapter factories
         $tempContainer = new ContainerBuilder();

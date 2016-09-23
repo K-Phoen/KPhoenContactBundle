@@ -23,7 +23,7 @@ class ContactFormHandler
         $this->mailer = $mailer;
     }
 
-    public function handle(Request $request, Message $message)
+    public function handle(Request $request, Message $message) : bool
     {
         $this->form->handleRequest($request);
 
@@ -53,7 +53,7 @@ class ContactFormHandler
         return true;
     }
 
-    protected function dispatch($eventName, $event)
+    protected function dispatch(string $eventName, \KPhoen\ContactBundle\EventDispatcher\Event\ContactEvent $event)
     {
         $this->dispatcher->dispatch($eventName, $event);
     }
