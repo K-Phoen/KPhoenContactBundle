@@ -5,5 +5,4 @@ contact:
 contact_send:
     path: /contact/send
     defaults: { _controller: "KPhoenContactBundle:Contact:contact" }
-    requirements:
-        _method: POST
+    methods: [POST]
