@@ -27,9 +27,9 @@ class MessageType extends AbstractType
         ]);
     }
 
-    public function getName() : string
+    public function getBlockPrefix() : string
     {
-        return 'contact_message';
+        return 'message';
     }
 
     public function configureOptions(OptionsResolver $resolver)
