@@ -7,7 +7,7 @@ contact:
     submit:
         button: Send
         success: Message sent!
-        error: An error occured.
+        error: An error occurred.
 
     form:
         sender_name: Name
