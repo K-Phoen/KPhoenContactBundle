@@ -34,9 +34,15 @@ class MessageType extends AbstractType
 
     public function configureOptions(OptionsResolver $resolver)
     {
-        $resolver->setDefaults([
+        $defaults = array(
             'data_class' => 'KPhoen\ContactBundle\Model\Message',
-            'intention' => 'contact',
-        ]);
+        );
+        if ($resolver->isDefined('csrf_token_id')) {
+            $defaults['csrf_token_id'] = 'contact';
+        } else {
+            $defaults['intention'] = 'contact';
+        }
+
+        $resolver->setDefaults($defaults);
     }
 }
