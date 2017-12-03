@@ -113,7 +113,7 @@ class ContactFormHandlerTest extends \PHPUnit_Framework_TestCase
 
     protected function getDispatcher()
     {
-        return $this->getMock('\Symfony\Component\EventDispatcher\EventDispatcherInterface');
+        return $this->createMock('\Symfony\Component\EventDispatcher\EventDispatcherInterface');
     }
 
     protected function getForm($valid = true)
@@ -132,6 +132,6 @@ class ContactFormHandlerTest extends \PHPUnit_Framework_TestCase
 
     protected function getRequest()
     {
-        return $this->getMock('\Symfony\Component\HttpFoundation\Request');
+        return $this->createMock('\Symfony\Component\HttpFoundation\Request');
     }
 }
