@@ -18,7 +18,7 @@
     </testsuites>
 
     <php>
-        <server name="KERNEL_DIR" value="./Tests/Fixtures/App/app" />
+        <server name="KERNEL_CLASS" value="AppKernel" />
     </php>
 
     <filter>
