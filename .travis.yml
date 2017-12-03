@@ -1,22 +1,36 @@
 language: php
-
 sudo: false
-
 php:
-    - 7.0
+  - 7.1
+  - 7.2
+
+matrix:
+  include:
+    php: '7.1'
+      v: dependencies=lowest
+    php: '7.1'
+      v: dependencies=highest
+    php: '7.2'
+      v: dependencies=highest
+  allow_failures:
+      php: nightly
+  fast_finish: true
 
 before_install:
-    - composer self-update
+  - composer self-update
 
-install:
-    - composer install --prefer-source
+before_script:
+  - if [ -z "$dependencies" ]; then composer install; fi;
+  - if [ "$dependencies" = "lowest" ]; then rm -rf vendor; composer update --prefer-lowest --no-interaction ; fi;
+  - if [ "$dependencies" = "highest" ]; then composer update --no-interaction ; fi;
+  - composer install --prefer-dist
 
 script:
   - mkdir -p build/logs
   - ./vendor/bin/phpunit -c phpunit.xml.dist
 
 after_script:
-  - travis_retry php vendor/bin/coveralls -v
+  --no-interaction travis_retry php vendor/bin/coveralls -v
 
 notifications:
-    email: false
+  email: false
