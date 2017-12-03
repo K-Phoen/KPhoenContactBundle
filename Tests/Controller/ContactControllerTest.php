@@ -37,7 +37,7 @@ class ContactControllerTest extends WebTestCase
             'message[sender_name]' => 'Joe',
             'message[sender_mail]' => 'joe@joe.fr',
             'message[subject]' => 'test subject',
-            'message[content]' => 'test content !',
+            'message[content]' => 'test content!',
         ]);
 
         $crawler = $client->submit($form);
@@ -53,7 +53,7 @@ class ContactControllerTest extends WebTestCase
         list($mail) = $collector->getMessages();
 
         $this->assertTrue($mail instanceof \Swift_Message);
-        $this->assertContains('test content !', (string) $mail);
+        $this->assertContains('test content!', (string) $mail);
         $this->assertEquals(['foo@bar.baz' => ''], $mail->getTo());
         $this->assertEquals(['no-reply@bar.baz' => ''], $mail->getFrom());
         $this->assertEquals(['joe@joe.fr' => 'Joe'], $mail->getReplyTo());
