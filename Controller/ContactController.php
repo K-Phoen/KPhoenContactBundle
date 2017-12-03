@@ -7,9 +7,6 @@ use Symfony\Component\HttpFoundation\Request;
 
 class ContactController extends BaseContactController
 {
-    /**
-     * @Template("@KPhoenContact/Contact/contact.html.twig")
-     */
     public function contactAction(Request $request)
     {
         list($message, $form) = $this->getContactForm();
@@ -18,10 +15,13 @@ class ContactController extends BaseContactController
             return $res;
         }
 
-        return [
-            'form' => $form->createView(),
-            'route' => 'contact_send',
-            'route_args' => [],
-        ];
+        return $this->render(
+            'KPhoenContactBundle:Contact:contact.html.twig',
+            [
+                'form' => $form->createView(),
+                'route' => 'contact_send',
+                'route_args' => [],
+            ]
+        );
     }
 }
