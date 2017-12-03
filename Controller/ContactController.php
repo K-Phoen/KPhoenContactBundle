@@ -8,7 +8,7 @@ use Symfony\Component\HttpFoundation\Request;
 class ContactController extends BaseContactController
 {
     /**
-     * @Template()
+     * @Template("@KPhoenContact/Contact/contact.html.twig")
      */
     public function contactAction(Request $request)
     {
