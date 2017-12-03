@@ -7,11 +7,11 @@ php:
 matrix:
   include:
     php: '7.1'
-      v: dependencies=lowest
+    env: dependencies=lowest
     php: '7.1'
-      v: dependencies=highest
+    env: dependencies=highest
     php: '7.2'
-      v: dependencies=highest
+    env: dependencies=highest
   allow_failures:
       php: nightly
   fast_finish: true
